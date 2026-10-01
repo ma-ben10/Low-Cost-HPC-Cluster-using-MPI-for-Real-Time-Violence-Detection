@@ -1,1 +1,0 @@
-Your system is a Heterogeneous HPC (H2PC) cluster composed of an x86_64 master node (Dell Latitude running Arch Linux) and four ARM Cortex-A53 slave nodes (QEMU-emulated Raspberry Pi 3B running Raspberry Pi OS), interconnected via a virtual bridge network (br0) using TAP interfaces, and coordinated using OpenMPI for parallel job execution
