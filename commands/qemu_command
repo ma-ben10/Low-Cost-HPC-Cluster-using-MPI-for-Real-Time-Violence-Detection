@@ -1,0 +1,12 @@
+qemu-system-aarch64 \
+  -machine raspi3b \
+  -cpu cortex-a53 \
+  -m 1024 \
+  -kernel kernel8.img \
+  -dtb bcm2710-rpi-3-b.dtb \
+  -drive format=raw,file=2025-05-13-raspios-bookworm-armhf-lite.img \
+  -append "console=ttyAMA0 root=/dev/mmcblk0p2 rw rootwait" \
+  -netdev user,id=net0,hostfwd=tcp::2222-:22 \
+  -device usb-net,netdev=net0 \
+  -no-reboot \
+  -serial stdio

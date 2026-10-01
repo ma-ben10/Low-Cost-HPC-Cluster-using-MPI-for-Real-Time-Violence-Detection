@@ -1,0 +1,45 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Build outputs and local binaries
+*.o
+*.so
+code/hello_mpi_x86
+code/matmul
+code/mpi_trap_pi
+
+# QEMU images and archives (large binary artifacts)
+*.img
+*.qcow2
+*.raw
+*.iso
+*.zip
+
+# ML model artifacts (use GitHub Releases or external storage)
+*.pt
+*.pth
+*.onnx
+
+# Video datasets and runtime inputs
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Runtime logs and generated reports
+deploy_log.txt
+violanc/deploy_log.txt
+*.log
+*.pdf
+
+# Local/editor/system files
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo

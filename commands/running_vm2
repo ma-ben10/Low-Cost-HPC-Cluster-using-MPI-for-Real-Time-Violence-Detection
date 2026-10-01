@@ -1,0 +1,9 @@
+sudo qemu-system-aarch64 \
+  -machine raspi3b -cpu cortex-a53 -m 1024 \
+  -kernel $BASE/kernel8_64.img \
+  -dtb $BASE/bcm2710-rpi-3-b_64.dtb \
+  -drive format=raw,file=$BASE/vm2_64.img \
+  -append "console=ttyAMA0 root=/dev/mmcblk0p2 rw rootwait" \
+  -netdev tap,id=net0,ifname=tap2,script=no,downscript=no \
+  -device usb-net,netdev=net0,mac=52:54:00:00:00:02 \
+  -no-reboot -display none -daemonize

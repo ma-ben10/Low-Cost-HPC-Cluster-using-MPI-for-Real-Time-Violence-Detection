@@ -1,0 +1,6 @@
+#-np 2 --host localhost:2 /home/amine/project_2CS/Pi3_slave/code/mpi_trap_pi
+-np 1 --host 192.168.100.42:1 /home/pi/Pi_estimation/mpi_trap_pi
+-np 1 --host 192.168.100.44:1 /home/pi/Pi_estimation/mpi_trap_pi
+-np 1 --host 192.168.100.43:1 /home/pi/Pi_estimation/mpi_trap_pi
+#-np 2 --host 10.0.0.1 /home/amine/project_2CS/Pi3_slave/code/mpi_trap_pi
+#-np 2 --host 10.0.0.165 /home/pi/trap_pi/mpi_trap_pi
