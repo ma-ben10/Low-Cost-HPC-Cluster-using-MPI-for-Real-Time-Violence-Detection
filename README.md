@@ -446,5 +446,45 @@ The model is also deployed on **Hugging Face Spaces** (no local install needed).
 **Supervisors:** Dr Abdelkader AMRANE · Dr Abdelatif RAHMOUN
 
 ---
+## 👨‍💻 My Contributions
+
+I was mainly responsible for the distributed infrastructure and communication
+layer of the cluster, as well as part of the performance analysis.
+
+### Cluster Infrastructure & Networking
+
+- Configured the network connectivity between the Raspberry Pi nodes and
+  verified node-to-node communication before deploying MPI.
+- Configured network services required for the diskless cluster architecture.
+- Implemented NFS-based network filesystem access.
+- Configured network booting, allowing Raspberry Pi workers to boot their
+  operating system over the network without relying on local storage.
+- Prepared and maintained the network configuration required for the
+  master/worker architecture.
+
+### OpenMPI Configuration
+
+- Configured OpenMPI across the master and Raspberry Pi worker nodes.
+- Ensured that the MPI environment and required configuration were consistent
+  across the cluster.
+- Tested communication between MPI processes before running the distributed
+  workloads.
+
+### Performance Analysis
+
+I also participated in the experimental performance analysis of the cluster:
+
+- Compared execution time across different execution configurations.
+- Measured and analyzed the speedup obtained from parallel execution.
+- Applied Amdahl's Law to estimate theoretical speedup and scalability limits.
+- Applied Gustafson's Law to analyze scaled workloads.
+- Used the Karp–Flatt metric to estimate the effective serial fraction.
+- Analyzed communication overhead and identified the network as a major
+  scalability bottleneck.
+
+The measured 4-node configuration achieved a speedup of approximately `1.235×`,
+while the analysis showed that communication overhead and the 100 Mbps network
+fabric significantly limited scalability.
+
 
 ⭐ If you found this project useful or educational, feel free to star the repository!
